@@ -13,15 +13,15 @@ sudo apt-get install -y libicu-dev python3-icu pkg-config
 sudo apt-get install -y nginx
 
 # Download LibreTranslate source
-git clone https://github.com/LibreTranslate/LibreTranslate.git ~/LibreTranslate
+git clone https://github.com/LibreTranslate/LibreTranslate.git 
 
 # Setup virtualenv
-virtualenv ~/LibreTranslate/env
+virtualenv /LibreTranslate/env
 
 # Install gunicorn
-~/LibreTranslate/env/bin/pip install gunicorn
+/LibreTranslate/env/bin/pip install gunicorn
 
 # Install and run LibreTranslate on port 5000
-~/LibreTranslate/env/bin/pip install ~/LibreTranslate/ --no-cache-dir
-~/LibreTranslate/env/bin/libretranslate
+/LibreTranslate/env/bin/pip install LibreTranslate/ --no-cache-dir
+/LibreTranslate/env/bin/libretranslate
 
