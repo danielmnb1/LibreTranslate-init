@@ -5,9 +5,9 @@ After=network.target
 [Service]
 User=root
 Group=root
-WorkingDirectory=/home/libretranslate/LibreTranslate
-Environment="PATH=/home/libretranslate/LibreTranslate/env/bin"
-ExecStart=/home/libretranslate/LibreTranslate/env/bin/gunicorn --workers 12 --bind unix:libretranslate.sock -m 007 wsgi:app
+WorkingDirectory=/home/LibreTranslate
+Environment="PATH=/home/LibreTranslate/env/bin"
+ExecStart=/home/LibreTranslate/env/bin/gunicorn --workers 12 --bind unix:libretranslate.sock -m 007 wsgi:app
 Restart=always
 ExecReload=/bin/kill -s HUP $MAINPID
 KillMode=mixed
