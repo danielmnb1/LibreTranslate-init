@@ -3,11 +3,11 @@ Description=LibreTranslate WSGI with Gunicorn and Nginx
 After=network.target
 
 [Service]
-User=libretranslate
-Group=www-data
+User=root
+Group=root
 WorkingDirectory=/home/libretranslate/LibreTranslate
 Environment="PATH=/home/libretranslate/LibreTranslate/env/bin"
-ExecStart=/home/libretranslate/LibreTranslate/env/bin/gunicorn --workers 3 --bind unix:libretranslate.sock -m 007 wsgi:app
+ExecStart=/home/libretranslate/LibreTranslate/env/bin/gunicorn --workers 12 --bind unix:libretranslate.sock -m 007 wsgi:app
 Restart=always
 ExecReload=/bin/kill -s HUP $MAINPID
 KillMode=mixed
