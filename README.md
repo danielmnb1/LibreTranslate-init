@@ -9,7 +9,7 @@ Uses WSGI with [Gunicorn and Nginx](https://www.digitalocean.com/community/tutor
 ```
 # Add libretranslate user
 useradd Libretranslate
-mkdir /home/libretranslate
+mkdir /home/Libretranslate
 chown libretranslate:libretranslate /home/Libretranslate
 usermod -aG sudo libretranslate
 passwd -d libretranslate
